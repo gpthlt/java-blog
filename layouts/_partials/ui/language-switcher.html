@@ -21,14 +21,14 @@
   {{- $nextIndex := mod (add $currentIndex 1) (len $languages) -}}
   {{- $nextLang := index $languages $nextIndex -}}
   
-  {{- $targetURL := "/" -}}
+  {{- $targetURL := "/java-blog/" -}}
   {{- if $currentPage.IsTranslated -}}
     {{- range $currentPage.Translations -}}
       {{- if eq .Language.Lang $nextLang.Lang -}}
         {{- $targetURL = .RelPermalink -}}
       {{- end -}}
     {{- end -}}
-    {{- if eq $targetURL "/" -}}
+    {{- if eq $targetURL "/java-blog/" -}}
       {{- $targetURL = printf "/%s/" $nextLang.Lang -}}
     {{- end -}}
   {{- else -}}
@@ -53,14 +53,14 @@
     {{- $isCurrent := eq $lang $currentLang -}}
 
     {{- /* 获取当前页面在目标语言下的URL */ -}}
-    {{- $targetURL := "/" -}}
+    {{- $targetURL := "/java-blog/" -}}
     {{- if $currentPage.IsTranslated -}}
       {{- range $currentPage.Translations -}}
         {{- if eq .Language.Lang $lang -}}
           {{- $targetURL = .RelPermalink -}}
         {{- end -}}
       {{- end -}}
-      {{- if eq $targetURL "/" -}}
+      {{- if eq $targetURL "/java-blog/" -}}
         {{- $targetURL = printf "/%s/" $lang -}}
       {{- end -}}
     {{- else -}}

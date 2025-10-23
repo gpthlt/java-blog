@@ -50,7 +50,7 @@
         break;
       case "float":
         // 悬浮模式在滚动时自动隐藏 dock
-        if (isDockVisible && (currentScrollTop > lastScrollTop)) {
+        if (isDockVisible && currentScrollTop > lastScrollTop) {
           hideDock();
         }
         break;
@@ -71,7 +71,7 @@
     dock.classList.remove(
       "translate-y-0",
       "opacity-100",
-      "pointer-events-auto",
+      "pointer-events-auto"
     );
     dock.classList.add("translate-y-24", "opacity-0", "pointer-events-none");
     isDockVisible = false;
@@ -106,7 +106,7 @@
   // 悬浮模式触发器事件处理
   if (floatTrigger && dockMode === "float") {
     let hoverTimer;
-    
+
     // 点击触发器切换 dock
     floatTrigger.addEventListener("click", function (e) {
       e.preventDefault();
@@ -127,7 +127,7 @@
       clearTimeout(hoverTimer);
       // 鼠标离开时隐藏 dock
       setTimeout(() => {
-        if (isDockVisible && !dock.matches(':hover')) {
+        if (isDockVisible && !dock.matches(":hover")) {
           hideDock();
         }
       }, 200);
@@ -140,7 +140,7 @@
 
     dock.addEventListener("mouseleave", function () {
       setTimeout(() => {
-        if (isDockVisible && !floatTrigger.matches(':hover')) {
+        if (isDockVisible && !floatTrigger.matches(":hover")) {
           hideDock();
         }
       }, 200);
@@ -148,7 +148,11 @@
 
     // 点击页面其他区域时隐藏 dock
     document.addEventListener("click", function (e) {
-      if (isDockVisible && !dock.contains(e.target) && !floatTrigger.contains(e.target)) {
+      if (
+        isDockVisible &&
+        !dock.contains(e.target) &&
+        !floatTrigger.contains(e.target)
+      ) {
         hideDock();
       }
     });
@@ -183,12 +187,12 @@
         }
 
         // 否则跳转到首页
-        window.location.href = "/";
+        window.location.href = "/java-blog/";
         console.log("返回按钮点击 - 跳转首页");
       } catch (error) {
         // 如果出现错误，默认跳转到首页
         console.warn("返回功能出错，跳转到首页:", error);
-        window.location.href = "/";
+        window.location.href = "/java-blog/";
       }
     });
   }
@@ -203,10 +207,14 @@
       function tryToggleTOC(retries = 5) {
         if (window.TOC && window.TOC.initialized) {
           // 如果搜索modal是打开状态，先关闭搜索
-          if (window.Search && window.Search.isVisible && window.Search.isVisible()) {
+          if (
+            window.Search &&
+            window.Search.isVisible &&
+            window.Search.isVisible()
+          ) {
             window.Search.hide();
           }
-          
+
           // 切换目录状态
           window.TOC.toggle();
         } else if (window.TOC && !window.TOC.initialized && retries > 0) {
@@ -230,10 +238,15 @@
       function tryToggleSearch(retries = 5) {
         if (window.Search) {
           // 如果目录modal是打开状态，先关闭目录
-          if (window.TOC && window.TOC.initialized && window.TOC.isVisible && window.TOC.isVisible()) {
+          if (
+            window.TOC &&
+            window.TOC.initialized &&
+            window.TOC.isVisible &&
+            window.TOC.isVisible()
+          ) {
             window.TOC.hide();
           }
-          
+
           // 切换搜索状态（如果已打开则关闭，否则打开）
           if (window.Search.isVisible && window.Search.isVisible()) {
             window.Search.hide();
@@ -348,7 +361,7 @@
     window.location.hostname === "127.0.0.1"
   ) {
     console.log(
-      "Dock initialized successfully - positioned at perfect center bottom",
+      "Dock initialized successfully - positioned at perfect center bottom"
     );
   }
 })();

@@ -78,7 +78,7 @@ pagination:
   previous: "前へ"
   next: "次へ"
   page: "ページ"
-  of: "/"
+  of: "/java-blog/"
   pages: "ページ"
 
 # 検索関連
@@ -148,9 +148,9 @@ taxonomy:
 
 # タクソノミー用語ページ
 term:
-  tag_desc: "タグ \"{{ .tag }}\" の記事一覧"
-  category_desc: "カテゴリー \"{{ .category }}\" の記事一覧"
-  desc: "\"{{ .term }}\" の記事一覧"
+  tag_desc: 'タグ "{{ .tag }}" の記事一覧'
+  category_desc: 'カテゴリー "{{ .category }}" の記事一覧'
+  desc: '"{{ .term }}" の記事一覧'
   total_posts: "全 {{ .count }} 件の記事"
   date_range: "日付順"
   no_posts: "記事がありません"
