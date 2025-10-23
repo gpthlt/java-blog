@@ -25,6 +25,9 @@ jobs:
           submodules: false
           fetch-depth: 0
 
+      - name: Remove public directory if it exists
+        run: rm -rf public
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
