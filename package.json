@@ -12,5 +12,9 @@
     "ssg"
   ],
   "author": "hugo hugo",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.1.16"
+  }
 }
