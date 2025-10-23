@@ -117,7 +117,7 @@ enableEmoji = true
 
   [params.logo]
     image = "/java-blog/images/logo.svg"
-    link = "/"
+    link = "/java-blog"
   
   [params.favicon]
     svg = "/favicon.svg"
