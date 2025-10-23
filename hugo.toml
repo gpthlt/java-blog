@@ -2,6 +2,7 @@ baseURL = "https://gpthlt.github.io/java-blog/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+disableLanguages = ["zh-cn", "zh-tw", "ja", "ko", "ar", "de", "es", "fr", "it", "pt", "ru"]
 title = "Java Blog"
 theme = "hugo-narrow"
 
@@ -112,10 +113,10 @@ enableEmoji = true
   defaultAuthor = "Le Dong Trieu"
   language = "vi-VN"
   shortName = "Java Blog"
-  images = ["/images/og-default.svg"]
+  images = ["/java-blog/images/og-default.svg"]
 
   [params.logo]
-    image = "/images/logo.svg"
+    image = "/java-blog/images/logo.svg"
     link = "/"
   
   [params.favicon]
@@ -125,7 +126,7 @@ enableEmoji = true
     name = "Le Dong Trieu"
     title = "Software Developer | Java & JavaScript Enthusiast"
     description = "Đam mê lập trình và chia sẻ kiến thức về Java, JavaScript và công nghệ web."
-    avatar = "/images/avatar.svg"
+    avatar = "/java-blog/images/avatar.svg"
     
     [[params.author.social]]
       name = "GitHub"
