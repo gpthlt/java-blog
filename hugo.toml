@@ -112,7 +112,7 @@ enableEmoji = true
   defaultAuthor = "Le Dong Trieu"
   language = "vi-VN"
   shortName = "Java Blog"
-  images = ["/images/og-default.avif"]
+  images = ["/images/og-default.svg"]
 
   [params.logo]
     image = "/images/logo.svg"
