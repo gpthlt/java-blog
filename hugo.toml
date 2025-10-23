@@ -1,4 +1,4 @@
-baseURL = "https://hugo-narrow.vercel.app/"
+baseURL = "https://gpthlt.github.io/java-blog/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
